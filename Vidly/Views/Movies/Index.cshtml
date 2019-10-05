@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Vidly.Models.Movie>
+
+
+<h2>Movies</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+<p>
+    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Movie</th>
+            <th>Genre</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movies in Model)
+        {
+            <td>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
+            <td>@movies.Genre</td>
+            
+        }
+        </tbody>
+    </table>
+
+
+

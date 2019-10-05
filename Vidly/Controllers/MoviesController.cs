@@ -48,13 +48,25 @@ namespace Vidly.Controllers
 
         public ActionResult Index(int? pageIndex, string sortBy)
         {
+            var movies = _context.Movies.ToList();
             if (!pageIndex.HasValue)
                 pageIndex = 1;
 
             if (String.IsNullOrWhiteSpace(sortBy))
                 sortBy = "Name";
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            return View(movies);
+
+            //return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movies = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movies == null)
+                return HttpNotFound();
+            return View(movies);
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{4}):range(1, 12)}")]
