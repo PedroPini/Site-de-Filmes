@@ -12,23 +12,26 @@
 
 
     
-    <table id="customers" class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th> Customer</th>
-                <th>Discount Rate</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Customer</th>
+            <th>Discount Rate</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    @foreach (var users in Model)
+    {
         <tbody>
-            @foreach (var users in Model)
-            {
-                <td> @Html.ActionLink(@users.Name, "Details", "Customer", new { id = @users.Id }, null)</td>
-                <td>@users.MembershipType.Name</td>
-                <td>Delete</td>
-            }
+
+        <td> @Html.ActionLink(@users.Name, "Details", "Customer", new { id = @users.Id }, null)</td>
+        <td>@users.MembershipType.Name</td>
+        <td> @Html.ActionLink(@users.Name, "Edit", "Customer", new { id = @users.Id }, null)</td>
+        <td>Delete</td>
+
         </tbody>
-    </table>
+    }
+</table>
 
 
 
