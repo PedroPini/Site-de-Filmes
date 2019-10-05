@@ -195,6 +195,22 @@
     <Compile Include="Migrations\201910051259156_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201910051259156_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910051608415_AddNameInMemberShipType.cs" />
+    <Compile Include="Migrations\201910051608415_AddNameInMemberShipType.Designer.cs">
+      <DependentUpon>201910051608415_AddNameInMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910051634040_AddBirthDateInCustomer.cs" />
+    <Compile Include="Migrations\201910051634040_AddBirthDateInCustomer.Designer.cs">
+      <DependentUpon>201910051634040_AddBirthDateInCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910051645359_UpdateBirthToNull.cs" />
+    <Compile Include="Migrations\201910051645359_UpdateBirthToNull.Designer.cs">
+      <DependentUpon>201910051645359_UpdateBirthToNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910051730269_AddingMovieConfigurations.cs" />
+    <Compile Include="Migrations\201910051730269_AddingMovieConfigurations.Designer.cs">
+      <DependentUpon>201910051730269_AddingMovieConfigurations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -301,6 +317,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910051259156_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201910051259156_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910051608415_AddNameInMemberShipType.resx">
+      <DependentUpon>201910051608415_AddNameInMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910051634040_AddBirthDateInCustomer.resx">
+      <DependentUpon>201910051634040_AddBirthDateInCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910051645359_UpdateBirthToNull.resx">
+      <DependentUpon>201910051645359_UpdateBirthToNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910051730269_AddingMovieConfigurations.resx">
+      <DependentUpon>201910051730269_AddingMovieConfigurations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

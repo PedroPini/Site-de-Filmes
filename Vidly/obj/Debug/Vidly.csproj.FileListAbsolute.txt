@@ -109,3 +109,7 @@ D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.r
 D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
 D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddNameInMemberShipType.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddBirthDateInCustomer.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.UpdateBirthToNull.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddingMovieConfigurations.resources
