@@ -103,3 +103,9 @@ D:\www\source\repos\Vidly\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 D:\www\source\repos\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 D:\www\source\repos\Vidly\obj\Debug\Vidly.dll
 D:\www\source\repos\Vidly\obj\Debug\Vidly.pdb
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
+D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
