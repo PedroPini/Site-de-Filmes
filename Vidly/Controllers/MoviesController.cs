@@ -50,7 +50,9 @@ namespace Vidly.Controllers
         public ActionResult Index(int? pageIndex, string sortBy)
         {
             var genre = _context.Genres.ToList();
+            
             var movies = _context.Movies.ToList();
+            
             if (!pageIndex.HasValue)
                 pageIndex = 1;
 
