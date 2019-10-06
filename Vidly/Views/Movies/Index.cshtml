@@ -17,18 +17,20 @@
         <tr>
             <th> Movie</th>
             <th>Genre</th>
-            
+
         </tr>
     </thead>
-    <tbody>
-        @foreach (var movies in Model)
-        {
-            <td>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
-            <td>@movies.Genre</td>
-            
-        }
+    @foreach (var movies in Model)
+    {
+        <tbody>
+
+        <td>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
+        <td>@movies.Genre</td>
+
+
         </tbody>
-    </table>
+    }
+</table>
 
 
 

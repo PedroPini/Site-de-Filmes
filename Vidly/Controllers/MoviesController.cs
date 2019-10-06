@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModel;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -48,6 +49,7 @@ namespace Vidly.Controllers
 
         public ActionResult Index(int? pageIndex, string sortBy)
         {
+            var genre = _context.Genres.ToList();
             var movies = _context.Movies.ToList();
             if (!pageIndex.HasValue)
                 pageIndex = 1;
@@ -67,6 +69,60 @@ namespace Vidly.Controllers
             if (movies == null)
                 return HttpNotFound();
             return View(movies);
+        }
+
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+
+            var viewModel = new NewMovieViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateOrUpdate(Movie movie)
+        {
+            
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new NewMovieViewModel(movie)
+                {
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("MovieForm", viewModel);
+            }
+
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+
+
+                movie.Genre = new Genre();
+
+
+                
+                
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.Genre = movie.Genre;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+            }
+            
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{4}):range(1, 12)}")]
