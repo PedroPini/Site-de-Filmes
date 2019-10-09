@@ -1,5 +1,4 @@
 D:\www\source\repos\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
-D:\www\source\repos\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cache
 D:\www\source\repos\Vidly\bin\Vidly.dll.config
 D:\www\source\repos\Vidly\bin\Vidly.dll
 D:\www\source\repos\Vidly\bin\Vidly.pdb
@@ -105,3 +104,9 @@ D:\www\source\repos\Vidly\obj\Debug\Vidly.dll
 D:\www\source\repos\Vidly\obj\Debug\Vidly.pdb
 D:\www\source\repos\Vidly\obj\Debug\Vidly.Migrations.Initial.resources
 D:\www\source\repos\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+D:\www\source\repos\Vidly\bin\System.Net.Http.Formatting.dll
+D:\www\source\repos\Vidly\bin\System.Web.Http.dll
+D:\www\source\repos\Vidly\bin\System.Web.Http.WebHost.dll
+D:\www\source\repos\Vidly\bin\System.Net.Http.Formatting.xml
+D:\www\source\repos\Vidly\bin\System.Web.Http.xml
+D:\www\source\repos\Vidly\bin\System.Web.Http.WebHost.xml

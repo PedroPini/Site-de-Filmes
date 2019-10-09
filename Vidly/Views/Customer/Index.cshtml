@@ -11,7 +11,7 @@
 </p>
 
 
-    
+
 <table id="customers" class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -27,11 +27,52 @@
         <td> @Html.ActionLink(@users.Name, "Details", "Customer", new { id = @users.Id }, null)</td>
         <td>@users.MembershipType.Name</td>
         <td> @Html.ActionLink(@users.Name, "Edit", "Customer", new { id = @users.Id }, null)</td>
-        <td>Delete</td>
+        <td><button class="btn btn-primary edit" data-toggle="modal" data-target="#myModal" data-id="@users.Id"><i class="glyphicon glyphicon-edit"></i></button></td>
 
         </tbody>
     }
 </table>
 
+
+
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Customer.Name)
+                    @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Customer.Name, null, new { @class = "alert-warning" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Customer.MembershipTypeId)
+                    @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId, null, new { @class = "alert-warning" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Customer.BirthDate)
+                    @Html.TextBoxFor(m => m.Customer.BirthDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Customer.BirthDate, null, new { @class = "alert-warning" })
+                </div>
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsLetter) Subscribed to NewsLetter
+                    </label>
+                </div>
+                @Html.HiddenFor(m => m.Customer.Id)
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 

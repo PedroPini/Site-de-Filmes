@@ -44,7 +44,15 @@ namespace Vidly.Controllers
 
         public ActionResult Edit(int id)
         {
-            return Content("id=" + id);
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new NewMovieViewModel(movie)
+            {               
+                Genres = _context.Genres.ToList()
+            };
+            return View("MovieForm", viewModel);
         }
 
         public ActionResult Index(int? pageIndex, string sortBy)
@@ -78,7 +86,7 @@ namespace Vidly.Controllers
             var genres = _context.Genres.ToList();
 
             var viewModel = new NewMovieViewModel
-            {
+            {               
                 Genres = genres
             };
 
