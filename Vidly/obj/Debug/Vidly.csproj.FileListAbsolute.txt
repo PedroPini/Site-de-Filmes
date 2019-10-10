@@ -110,3 +110,5 @@ D:\www\source\repos\Vidly\bin\System.Web.Http.WebHost.dll
 D:\www\source\repos\Vidly\bin\System.Net.Http.Formatting.xml
 D:\www\source\repos\Vidly\bin\System.Web.Http.xml
 D:\www\source\repos\Vidly\bin\System.Web.Http.WebHost.xml
+D:\www\source\repos\Vidly\bin\AutoMapper.dll
+D:\www\source\repos\Vidly\bin\AutoMapper.xml
