@@ -9,6 +9,7 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
+
     public class CustomerController : Controller
     {
         private ApplicationDbContext _context;
@@ -78,11 +79,12 @@ namespace Vidly.Controllers
         }
 
         // GET: Customer
-        public ActionResult Index()
+        [Authorize]
+        public ViewResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            //var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
-            return View(customers);
+            return View();
         }
 
         public ActionResult Details(int id)

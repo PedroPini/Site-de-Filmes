@@ -190,6 +190,7 @@
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
+    <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,10 @@
     <Compile Include="Migrations\201910052249037_Initial.cs" />
     <Compile Include="Migrations\201910052249037_Initial.Designer.cs">
       <DependentUpon>201910052249037_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910180006568_SeedUsers.cs" />
+    <Compile Include="Migrations\201910180006568_SeedUsers.Designer.cs">
+      <DependentUpon>201910180006568_SeedUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -474,6 +479,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910052249037_Initial.resx">
       <DependentUpon>201910052249037_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910180006568_SeedUsers.resx">
+      <DependentUpon>201910180006568_SeedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
